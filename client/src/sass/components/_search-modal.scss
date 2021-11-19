@@ -1,0 +1,16 @@
+.search__modal{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    @include flex(center, center);
+    flex-direction: column;
+    h1{
+        font-size: 18px;
+        text-align: center;
+    }
+}

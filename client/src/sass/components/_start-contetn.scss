@@ -1,0 +1,25 @@
+.start__content{
+    height: calc(100% - 45px);
+    &__box{
+        @include flex(center, center);
+        flex-direction: column;
+        button{
+            position: relative;
+            overflow: hidden;
+            background: $blue_bg;
+            color: #fff;
+            padding: 5px;
+            margin-top: 20px;
+            border-radius: 5px;
+            z-index: 990;
+            #file__up{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }
+}

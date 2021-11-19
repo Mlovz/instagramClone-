@@ -1,0 +1,141 @@
+.post{
+    &__box{
+
+    }
+    .post__card{
+        display: flex;
+        height: 700px;
+        .card__body{
+            width: 100%;
+            &__images{
+                height: 100%;
+            }
+            &__dots{
+                bottom: 15px;
+                &__item{
+                    background: #fff;
+                    &.active{
+                        background: $blue_bg;
+                    }
+                }
+                
+            }
+        }
+        &__detail{
+            max-width: 400px;
+            width: 100%;
+            @include flex(center, center);
+            flex-direction: column;
+            .card__header{
+                width: 100%;
+                &__content{
+                    .avatar{
+                        min-width: 40px;
+                    }
+                    p{
+                        margin-left: 5px;
+                        word-break: break-all;
+                    }
+                }
+                
+            }
+            &__body{
+                overflow-y: auto;
+                height: 100%;
+            }
+            .comment__card{
+                width: 100%;
+                margin-bottom: 10px;
+                &__header{
+                    display: flex;
+                    align-items: flex-start;
+                    position: relative;
+                }
+                &__content{
+                    margin-left: 5px;
+                    width: 100%;
+                    word-break: break-all;
+                    padding-right: 40px;
+                    span{
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin-right: 10px;
+                    }
+                    >a{
+                        color: $blue_bg;
+                        margin-right: 10px;
+                    }
+                }
+                &__footer{
+                    &__date{
+                        font-weight: 400;
+                        font-size: 9px;
+                        text-transform: uppercase;
+                    }
+                    &__likes{
+                        margin-left: 10px;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                
+                }
+                &__like{
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    svg{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            .card__footer{
+                width: 100%;
+            }
+        }
+        &__footer__window{
+            display: none;
+        }
+
+    }
+    
+    &__user__posts{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    @media only screen and (max-width: 520px) {
+        .post__card{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            .card__body{
+                height: 100%;
+            }
+            &__detail{
+                display: none;
+
+            }
+            &__footer__window{
+                display: block;
+            }
+        }
+        &__user__posts{
+            justify-content: center;
+        }
+    }
+   
+    @media only screen and (max-width: 992px) {
+        &__user__posts{
+            justify-content: center;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        &__user__posts{
+            .post__thumb{
+                max-width: 100%;
+            }
+        }
+    }
+}

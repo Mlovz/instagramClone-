@@ -1,0 +1,40 @@
+.video__show{
+    position: relative;
+    &__pos {
+        position: absolute;
+    }
+    &__volume{
+        bottom: 30px;
+        right: 20px;
+        opacity: 0;
+        transition: all .2s;
+        >i{
+            color: #000;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    &__play{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        > i{
+            font-size: 40px;
+            color: rgb(155, 153, 153);
+        }
+    }
+    &__times{
+        top: 30px;
+        right: 20px;
+        opacity: 0;
+        transition: all .2s;
+    }
+    &:hover &__volume{
+        opacity: 1;
+        
+    }
+    &:hover &__times{
+        opacity: 1;
+        
+    }
+}

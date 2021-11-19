@@ -1,0 +1,130 @@
+.nav{
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: $max_width_content;
+        width: 100%;
+        margin: 0 auto;
+        height: $height_nav;
+    }
+    &__logo{
+    }
+    &__search{
+        max-width: 215px;
+        width: 100%;
+        &__form{
+            position: relative;
+            input{
+                width: 100%;
+                padding: 3px 5px;
+                font-size: 14px;
+                border-radius: 3px;
+            }
+            span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 14px;
+                color: #8e8e8e;
+                pointer-events: none;
+                i{
+                    font-size: 12px;
+                    margin-right: 5px;
+                }
+            }
+            &__load{
+                position: absolute;
+                top: 3px;
+                right: 5px;
+                img{
+                    width: 17px;
+                }
+            }
+        }
+    }
+
+    &__menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &__list{
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 100%;
+        }
+        
+        &__item~&__item{
+            margin-left: 24px;
+        }
+      
+        &__link{
+            cursor: pointer;
+            position: relative;
+            .notify__length{
+                @include flex(center, center);
+                width: 18px;
+                height: 18px;
+                color: #fff;
+                background: $red_bg;
+                font-size: 12px;
+                border-radius: 50%;
+                position: absolute;
+                right: -8px;
+                top: -6px;
+            }
+        }
+        .dropdown{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border: 1px solid #dbdbdb;
+            background: #fff;
+            max-width: 200px;
+            width: 100%;
+            transform: scale(0);
+            transition: all .1s ease;
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            &.active{
+                transform: scale(1);
+            }
+            &__item{
+                margin-top: 10px;
+                padding: 5px 20px;
+                cursor: pointer;
+            }
+        }
+
+        
+    }
+    @media only screen and (max-width: 600px) {
+        &__menu{
+            position: fixed;
+            bottom: 0;
+            height: $height_nav;
+            width: 100%;
+            background: #fff;
+            &__list{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+            .dropdown{
+                top: -130px;
+            }
+        }
+    }
+}

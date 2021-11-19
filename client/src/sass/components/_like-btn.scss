@@ -1,0 +1,16 @@
+.like__btn{
+    &.active{
+        animation: anim .2s linear;
+    }
+    @keyframes anim {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.5);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}

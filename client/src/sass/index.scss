@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+
+@import './variables';
+@import './mixin';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Nunito', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, button{
+    outline: none;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    background: transparent;
+}
+ul,ol,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: $text_color;
+  &:hover{
+    color: $text_color;
+  }
+}
+
+input{
+  border: 1px solid #dbdbdb;
+}
+
+.app{
+  &__main{
+    max-width: $max_width_content;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+}
+
+
+//components
+@import './components/info';
+@import './components/like-btn';
+@import './components/navbar';
+@import './components/post-card';
+@import './components/post-modal';
+@import './components/search-modal';
+@import './components/smile';
+@import './components/splash';
+@import './components/start-contetn';
+@import './components/storis';
+@import './components/success_post';
+@import './components/usercard';
+@import './components/addpost';
+@import './components/avatar';
+@import './components/button';
+@import './components/comments';
+@import './components/edit-profile';
+@import './components/end-content';
+@import './components/follow-btn';
+@import './components/global-modal';
+@import './components/image-content';
+@import './components/post-thumb';
+@import './components/notify-modal';
+@import './components/video';
+
+
+//pages
+@import './pages/home';
+@import './pages/login';
+@import './pages/post';
+@import './pages/explore';
+@import './pages/message';
+@import './pages/profile';

@@ -1,0 +1,15 @@
+.succes__post{
+    height: calc(100% - 45px);
+    @include flex(center, center);
+    &__box{
+        text-align: center;
+        i{
+            font-size: 70px;
+            color: rgb(255, 68, 21);
+        }
+        h3{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+    }
+}

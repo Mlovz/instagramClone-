@@ -1,0 +1,31 @@
+.home{
+    &__content{
+        .storis{
+            margin-bottom: 20px;
+        }
+    }
+    &__posts{
+        >div{
+            margin-bottom: 20px;
+        }
+    }
+    &__sugges{
+        margin-top: 20px;
+        &__title{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            @include flex(center, space-between);
+            h5{
+                font-size: 16px;
+            }
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        &__sugges{
+            display: none;
+        }
+    }
+}

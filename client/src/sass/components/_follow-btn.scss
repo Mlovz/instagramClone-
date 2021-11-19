@@ -1,0 +1,16 @@
+.follow__btn{
+    height: 30px;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    &__follow{
+        background: transparent;
+        color: $blue_bg;
+    }
+    &__unfollow{
+        background: transparent;
+        color: $red_bg;
+    }
+}
