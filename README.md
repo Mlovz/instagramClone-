@@ -1,7 +1,7 @@
 [Instagram](https://www.instagram.com/) клоне, MERN stack & Redux.
 
 # Демо
-[Deloy on Heroku]
+[Deloy on Heroku](https://instclonee.herokuapp.com/)
 
 # Проект разработан с использование 
 
